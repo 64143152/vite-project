@@ -67,7 +67,7 @@ function App() {
           {loading ? <p>Loading...</p> :
           <>
             <h1>{poke?.name}</h1>
-            <button onClick={addFav}>Add to Favorites</button>
+            <button onClick={addFav} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2'>Add to Favorites</button>
             <br />
             <img src={poke?.sprites?.other?.home.front_default} alt={poke?.name} />
             <ul>
@@ -75,8 +75,8 @@ function App() {
                 <li key={idx}>{abil.ability.name}</li>
               ))}
             </ul>
-            <button onClick={prevPoke}>Previouns</button>
-            <button onClick={nextPoke}>Next</button>
+            <button onClick={prevPoke} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2'>Previouns</button>
+            <button onClick={nextPoke} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2'>Next</button>
             </>
           }
         </div>
